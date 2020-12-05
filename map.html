@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/map.css">
+    <title>Map</title>
+</head>
+
+<body onload="onInit()">
+    </header>
+    <section> 
+        <a href="/index.html">Home</a>
+        <a href="/user-prefs.html">User-Prefs</a>
+       
+    </section>
+
+        <div id="map" style="width:100%;height:500px;"></div>
+
+        <button onclick="onGetPosition()"><img src="/img/set.png" class="set-btn"></button>
+
+        <h2>Current Position:</h2>
+        <table border="1">
+            <tr>
+                <td>Latitude</td>
+                <td id="latitude"></td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td id="longitude"></td>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td id="accuracy"></td>
+            </tr>
+            <tr>
+                <td>Timestamp</td>
+                <td id="timestamp"></td>
+            </tr>
+        </table>
+        
+        <h2>Favorite places:</h2>
+        <table border="1" class="placesTable">
+            <thead>
+                <tr>
+                    <td>Place Name</td>
+                    <td>Find the Place</td>
+                    <td>Delete Button</td>
+                </tr>
+            </thead>
+            <tbody class="favPlaces"></tbody>
+        </table>
+
+
+        <p id="locationError"></p>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTd-r9ES9me88-mTQasKgom191cNMihjY"></script>
+        <script src="js/utilService.js"></script>
+        <script src="js/placeController.js"></script>
+        <script src="js/storageService.js"></script>
+        <script src="js/placeService.js"></script>
+
+    </body>
+
+</html>
